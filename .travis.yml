@@ -3,7 +3,9 @@ os: linux
 sudo: required
 services:
   - postgresql
-before_script:
+addons:
+  postgresql: "9.4"
+before_install:
   - psql -c 'create database sms;' -U postgres
 script:
   - npm test

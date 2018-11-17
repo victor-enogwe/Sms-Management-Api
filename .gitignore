@@ -1,5 +1,4 @@
 # Logs
-logs
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -59,3 +58,4 @@ typings/
 
 # next.js build output
 .next
+logs/*.log

@@ -1,0 +1,92 @@
+{
+  "name": "sms-management-api",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.5.0"
+  },
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "db:prepare": "npm run migrate && npm run seed",
+    "lint": "standard --fix",
+    "migrate": "sequelize db:migrate",
+    "migrate:undo": "sequelize db:migrate:undo:all",
+    "prestart": "npm run db:prepare",
+    "seed": "sequelize db:seed:all",
+    "start": "node app.js",
+    "start:dev": "export NODE_ENV=development && nodemon app.js",
+    "test": "export NODE_ENV=test && standard && nyc _mocha --recursive test/index.spec.js",
+    "test:watch": "export NODE_ENV=test && standard && nyc _mocha --recursive test/index.spec.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-enogwe/Sms-Management-Api.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "heroku",
+    "graphql",
+    "postgres",
+    "postgraphille"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-enogwe/Sms-Management-Api/issues"
+  },
+  "homepage": "https://github.com/victor-enogwe/Sms-Management-Api#readme",
+  "nyc": {
+    "all": false,
+    "check-coverage": false,
+    "eager": true,
+    "cache": true,
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "clean": true,
+    "temp-directory": "./coverage/.tmp"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "coverage/*",
+      "dist/*"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "after",
+      "expect",
+      "beforeEach",
+      "afterEach"
+    ]
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "coveralls": "3.0.2",
+    "dotenv": "6.1.0",
+    "glob": "7.1.3",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.4",
+    "nyc": "13.1.0",
+    "sequelize-cli": "5.3.0",
+    "sinon": "7.0.0",
+    "standard": "12.0.1",
+    "supertest": "3.3.0"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "helmet": "3.14.0",
+    "moment": "2.22.2",
+    "morgan": "1.9.1",
+    "postgraphile": "4.0.0-rc.5",
+    "sequelize": "4.41.0",
+    "winston": "3.1.0"
+  }
+}

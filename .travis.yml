@@ -12,4 +12,4 @@ node_js: "10"
 cache:
   directories:
     - node_modules
-install: npm install
+install: npm install && npm run db:prepare

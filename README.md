@@ -1,5 +1,7 @@
 # Sms-Management-Api
 
+[![Build Status](https://travis-ci.com/victor-enogwe/Sms-Management-Api.svg?branch=master)](https://travis-ci.com/victor-enogwe/Sms-Management-Api) [![Coverage Status](https://coveralls.io/repos/github/victor-enogwe/Sms-Management-Api/badge.svg)](https://coveralls.io/github/victor-enogwe/Sms-Management-Api)
+
 an SMS management API
 
 ## Technologies

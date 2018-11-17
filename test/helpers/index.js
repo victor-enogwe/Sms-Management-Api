@@ -3,7 +3,7 @@ const { expect } = require('chai')
 const supertest = require('supertest')
 const { server, onError } = require('../../app')
 const { flattenArray } = require('../../utils/array.util')
-const { logger } = require('../../logs/index')
+const { logger } = require('../../logs')
 const stubs = require('./stubs')
 
 module.exports = {

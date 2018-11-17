@@ -12,4 +12,4 @@ node_js: "10"
 cache:
   directories:
     - node_modules
-install: npm install && npm run db:prepare
+install: npm i -g sequelize && npm install && npm run db:prepare

@@ -12,7 +12,7 @@
     "lint": "standard --fix",
     "migrate": "sequelize db:migrate",
     "migrate:undo": "sequelize db:migrate:undo:all",
-    "prestart": "npm run db:prepare",
+    "prestart": "npm run migrate",
     "seed": "sequelize db:seed:all",
     "start": "node app.js",
     "start:dev": "export NODE_ENV=development && nodemon app.js",

@@ -7,7 +7,8 @@ const config = {
   dialect,
   logging: devMode ? log => log : false,
   dialectOptions: {
-    multipleStatements: true
+    multipleStatements: true,
+    ssl: !devMode
   },
   define: {
     timestamps: true,
